@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-
-    <nav class="navbar">
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>    
+    <nav class="navbar">  
         <div class="content">
             <div class="logo"><a href="#home">Berqia Mouad</a></div>
             <ul class="menu-list">
@@ -196,6 +198,23 @@
 
 
     <!--================================scripts=========================================-->
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        function counter(){
+            var count = setInterval(function(){
+                var c = parseInt($('.counter').text());
+                $('.counter').text((++c).toString());
+                if(c == 100){
+                    clearInterval(count);
+                    $('.counter').addClass('hide');
+                    $('.preloader').addClass('active');
+                }
+            },8)
+        }
+        counter();
+    </script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
