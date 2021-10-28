@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+
 html{
     scroll-behavior: smooth;
 }
@@ -174,6 +175,7 @@ h2 span::before{
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 .about-info p span{
@@ -552,7 +554,7 @@ textarea.contact-form-text{
         font-size: 17px;
         line-height: 25px;
         margin-bottom: 0px;
-        text-align: center;
+        text-align: justify;
         margin-left: 129px;
     }
 
@@ -561,15 +563,8 @@ textarea.contact-form-text{
         margin-bottom: 25px;
     }
 
-    .box:hover .box-content{
-        transform: translate(0, 35px);
-    }
-
-    .box:hover .imgBox{
-        transform: translate(0, -35px);
-    }
     .projects .projects-content{
-        width: 900px;
+        width: 100%;
         display: grid;
         margin: 0 auto;
     }
@@ -577,8 +572,8 @@ textarea.contact-form-text{
         position: relative;
         width: 250px;
         height: 350px;
-        margin-top: 7%;
-        margin-left: 7%;
+        margin-top: 15%;
+        margin-left: 15%;
         box-shadow: 0 15px 60px rgba(0, 0, 0, .5);
     }
     .card .face1 .content-face .btn{
