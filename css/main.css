@@ -214,7 +214,7 @@ h2 span::before{
     width: 100%;
     border: 10px solid transparent;
     object-fit: cover;
-    border-radius: 8%;
+    border-radius: 100%;
 }
 
 
