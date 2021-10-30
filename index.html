@@ -8,13 +8,20 @@
     <link rel="shortcut icon" href="pictures/BM.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/scrolleffect.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
+
+
 <body>
     <div class="preloader">
         <div class="counter">0</div>
-    </div>    
+    </div>   
+
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div> 
+
     <nav class="navbar">  
         <div class="content">
             <div class="logo"><a href="#home">Berqia Mouad</a></div>
@@ -267,6 +274,15 @@
         menu1d.onclick = ()=>{
             menu.classList.remove("active");
             menuBtn.classList.remove("hide")
+        }
+    </script>
+
+    <script>
+        let progress = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function() {
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
         }
     </script>
 </body>
