@@ -6,9 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
     <link rel="stylesheet" href="css/thanks.css">
+    <link rel="stylesheet" href="css/scrolleffect.css">
 </head>
 <body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div> 
+
     <h1><span>Thank You</span> You Will receive An answer soon</h1>
     <a href="index.html"><input type="button" value="Back Home" id="cta-btn"></a> 
+
+    <script>
+        let progress = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function() {
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
 </body>
 </html>
