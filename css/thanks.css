@@ -34,34 +34,71 @@ h1 span::before{
     margin-left: -.3em;
 }
 
-input[type=button]{
-    background-color: #383838;
-    border: none;
-    width: 20%;
-    color: white;
-    font-weight: bold;
-    padding: 1em;
-    border-radius: .5em;
-    font-size: 1.3em;
+.btn-container{
+    margin-left: 42%;
+}
+
+.btn{
+    border: 1px solid rgb(78, 78, 78);
+    background: none;
+    padding: 5px 20px;
+    font-size: 25px;
     cursor: pointer;
-    margin-left: 40%;
+    margin-left: 20px;
+    margin-top: 5px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
 }
 
-input[type=button]:hover{
-    background-color: #161616;
+.back{
+    color: rgb(78, 78, 78);
 }
 
-@media (max-width: 700px){
-    input[type=button]{
-        width: 40%;
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #34495e;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.back::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.back:hover::before{
+    height: 190%;
+}
+
+.back:hover{
+    color: #fff;
+}
+
+@media(max-width: 952px){
+    .btn-container{
+        margin-left: 38%;
+    }
+}
+
+@media(max-width: 952px){
+    .btn-container{
+        margin-left: 36%;
+    }
+}
+
+@media(max-width: 525px){
+    .btn-container{
         margin-left: 30%;
     }
 }
 
-@media (max-width: 400px){
-    input[type=button]{
-        width: 55%;
-        padding: .7em;
-        margin-left: 20%;
+@media(max-width: 420px){
+    .btn-container{
+        margin-left: 28%;
     }
 }
