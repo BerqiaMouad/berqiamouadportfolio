@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/scrolleffect.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 </head>
 
 
@@ -21,6 +22,7 @@
 
     <div id="progressbar"></div>
     <div id="scrollPath"></div> 
+    <div class="scrollTop" onclick="scrollToTop()"></div>
 
     <nav class="navbar">  
         <div class="content">
@@ -80,8 +82,8 @@
     <section class="skills" id="skills">
         <div class="container">
             <h2 class="title" data-aos="fade-up" data-aos-duration="1000"><span>My Skills</span></h2>
-            <div class="skills-content" data-aos="fade-up" data-aos-duration="1000">
-                <div class="column left">
+            <div class="skills-content">
+                <div class="column left" data-aos="fade-up" data-aos-duration="1000">
                     <div class="text">My codding skills & experience</div>
                     <p>
                         I have a good experience with C/C++ codding thanks to competitive programming 
@@ -90,41 +92,20 @@
                         languages are C/C++ and Python and I love HTML/CSS. I can learn anything because I always try my best to learn new things. 
                     </p>
                 </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>HTML</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="line html"></div>
+                <div class="colum right">
+                    <div class="first-line">
+                        <i class="fab fa-html5 fa-4x" data-aos="fade-down" data-aos-duration="1500"></i>
+                        <i class="fab fa-css3-alt fa-4x" data-aos="fade-down" data-aos-duration="2000"></i>
+                        <i class="fab fa-js fa-4x" data-aos="fade-down" data-aos-duration="2500"></i>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>CSS</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="line css"></div>
+                    <div class="second-line">
+                        <i class="fab fa-python fa-4x" data-aos="fade-down" data-aos-duration="1500"></i>
+                        <i class="fab fa-git-alt fa-4x" data-aos="fade-down" data-aos-duration="2000"></i>
+                        <i class="fab fa-bootstrap fa-4x" data-aos="fade-down" data-aos-duration="2500"></i>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>JavaScript</span>
-                            <span>40%</span>
-                        </div>
-                        <div class="line js"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Python</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="line python"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>C/C++</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="line cpp"></div>
+                    <div class="third-line">
+                        <i class="fab fa-linux fa-4x" data-aos="fade-down" data-aos-duration="1500"></i>
+                        <i data-aos="fade-down" data-aos-duration="2000"><span class="iconify" data-icon="bx:bxl-c-plus-plus" data-width="68" data-height="68"></span></i>
                     </div>
                 </div>
             </div>
@@ -222,6 +203,20 @@
             },8)
         }
         counter();
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function(){
+            var scroll = document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500)
+        })
+
+        function scrollToTop(){
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
     </script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
