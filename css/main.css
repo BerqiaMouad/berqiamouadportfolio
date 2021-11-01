@@ -324,7 +324,7 @@ h2 span::before{
 }
 
 .skills .skills-content .right .second-line i{
-    margin-right: 40px;
+    margin-right: 45px;
 }
 
 .skills .skills-content .right .third-line {
@@ -337,6 +337,7 @@ h2 span::before{
 }
 
 .skills .skills-content .right .third-line .iconify{
+    margin-right: 45px;
     margin-left: 38px;
 }
 
